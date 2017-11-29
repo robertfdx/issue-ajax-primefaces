@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+</h:head>
+<body>
+	<p:layout>
+		<p:layoutUnit style="border: 5px dotted red" position="center">
+			<p:dataTable id="updateMe" var="car" value="#{mb.cars}">
+				<p:column headerText="Id">
+					<h:outputText value="#{car.id}" />
+				</p:column>
+
+				<p:column headerText="Year">
+					<h:outputText value="#{car.year}" />
+				</p:column>
+
+				<p:column headerText="Brand">
+					<h:outputText value="#{car.brand}" />
+				</p:column>
+
+				<p:column headerText="Color">
+					<h:outputText value="#{car.color}" />
+				</p:column>
+			</p:dataTable>
+			<h:form>
+				<p:commandButton id="loadButton" value="Load"
+					update="@all"/>
+			</h:form>
+			<div class="test-wrapper" style="height: 100px; border: 1px solid red; background-color: beige"></div>
+		</p:layoutUnit>
+	</p:layout>
+</body>
+
+</html>
